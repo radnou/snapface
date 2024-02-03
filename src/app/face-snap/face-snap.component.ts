@@ -1,40 +1,29 @@
-import {Component} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FaceSnap } from '../model /face-snap.model';
 
 @Component({
   selector: 'app-face-snap',
   standalone: true,
   templateUrl: './face-snap.component.html',
-  styleUrl: './face-snap.component.css'
+  styleUrl: './face-snap.component.css',
 })
 export class FaceSnapComponent {
-  title!: string;
-  description!: string;
-  createdDate!: Date;
-  snaps!: number;
-  imageUrl!: string;
   snapped: boolean;
   buttonText: string;
+  @Input() faceSnap!: FaceSnap;
 
   constructor() {
-    this.title = "test";
-    this.description = " description";
-    this.createdDate = new Date();
-    this.snaps = 0;
-    this.imageUrl = "https://picsum.photos/600/600";
     this.snapped = false;
     this.buttonText = 'Oh Snap!';
-
   }
 
   OnAddSnap() {
     if (this.buttonText === 'Oh Snap!') {
-      this.snaps++;
+      this.faceSnap.snaps++;
       this.buttonText = 'Oops, unSnap!';
     } else {
-      this.snaps--;
+      this.faceSnap.snaps--;
       this.buttonText = 'Oh Snap!';
     }
-
-
   }
 }

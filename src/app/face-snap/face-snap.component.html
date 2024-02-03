@@ -1,10 +1,12 @@
 <div class="face-snap-card">
-  <img src="{{imageUrl}}" alt="picture of the day"/>
-  <h2>{{ title.toLocaleUpperCase() }}</h2>
-  <p>Mis en ligne le {{ createdDate.toLocaleDateString() }}</p>
-  <p>{{ description }}</p>
+  <img src="{{ faceSnap.imageUrl}}" alt="picture of the day"/>
+  <h2>{{ faceSnap.title.toLocaleUpperCase() }}</h2>
+  <p>Mis en ligne le {{ faceSnap.createdDate.toLocaleDateString() }}</p>
+  <p>{{ faceSnap.description }}</p>
   <p>
     <button (click)="OnAddSnap()">
-{{buttonText}}
-    </button> {{ snaps }}</p>
+      {{ buttonText }}
+    </button>
+    {{ faceSnap.snaps }}
+  </p>
 </div>
