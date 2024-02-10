@@ -33,7 +33,7 @@ export class AppComponent {
         imageUrl:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
         createdDate: new Date(),
-        snaps: 6,
+        snaps: 146,
         location: 'la montagne',
       },
       {
