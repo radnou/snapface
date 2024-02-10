@@ -1,8 +1,8 @@
 <div class="face-snap-card">
   <img alt="picture of the day" src="{{ faceSnap.imageUrl}}"/>
-  <h2>{{ faceSnap.title.toLocaleUpperCase() }}</h2>
+  <h2>{{ faceSnap.title | titlecase }}</h2>
   <p>Mis en ligne le {{ faceSnap.createdDate.toLocaleDateString() }}</p>
-  <p>{{ faceSnap.description }}</p>
+  <p>{{ faceSnap.description | lowercase }}</p>
   <p *ngIf="faceSnap.location">Snap capture : {{ faceSnap.location }} </p>
   @if (faceSnap.location) {
     <p>Snap capture : {{ faceSnap.location }}</p>

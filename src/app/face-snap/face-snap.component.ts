@@ -1,13 +1,27 @@
 import { Component, Input } from '@angular/core';
 import { FaceSnap } from '../model /face-snap.model';
-import { NgClass, NgIf, NgStyle } from '@angular/common';
+import {
+  LowerCasePipe,
+  NgClass,
+  NgIf,
+  NgStyle,
+  TitleCasePipe,
+  UpperCasePipe,
+} from '@angular/common';
 
 @Component({
   selector: 'app-face-snap',
   standalone: true,
   templateUrl: './face-snap.component.html',
   styleUrl: './face-snap.component.css',
-  imports: [NgIf, NgStyle, NgClass],
+  imports: [
+    NgIf,
+    NgStyle,
+    NgClass,
+    UpperCasePipe,
+    TitleCasePipe,
+    LowerCasePipe,
+  ],
 })
 export class FaceSnapComponent {
   snapped: boolean;
