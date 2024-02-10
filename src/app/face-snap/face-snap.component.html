@@ -8,7 +8,7 @@
     <p>Snap capture : {{ faceSnap.location }}</p>
   }
   <p>
-    <button (click)="OnAddSnap()">
+    <button (click)="OnAddSnap()" [ngClass]="{'snapped':buttonText ==='Oops, unSnap!'}">
       {{ buttonText }}
     </button>
     <span [ngStyle]="{color:'rgb(0,'+ faceSnap.snaps +',0)'}">🤌{{ faceSnap.snaps }}</span>
