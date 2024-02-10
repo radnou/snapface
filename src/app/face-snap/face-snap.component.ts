@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { FaceSnap } from '../model /face-snap.model';
 import {
+  CurrencyPipe,
   DatePipe,
+  DecimalPipe,
   LowerCasePipe,
   NgClass,
   NgIf,
   NgStyle,
+  PercentPipe,
   TitleCasePipe,
   UpperCasePipe,
 } from '@angular/common';
@@ -23,6 +26,9 @@ import {
     TitleCasePipe,
     LowerCasePipe,
     DatePipe,
+    DecimalPipe,
+    PercentPipe,
+    CurrencyPipe,
   ],
 })
 export class FaceSnapComponent {
