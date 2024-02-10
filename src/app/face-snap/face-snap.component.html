@@ -1,7 +1,13 @@
 <div class="face-snap-card">
   <img alt="picture of the day" src="{{ faceSnap.imageUrl}}"/>
   <h2>{{ faceSnap.title | titlecase }}</h2>
+<<<<<<< HEAD
   <p>Mis en ligne le {{ faceSnap.createdDate.toLocaleDateString() }}</p>
+=======
+  <p>Mis en ligne le {{ faceSnap.createdDate  | date }}</p>
+  <p>(LongDate) Mis en ligne le {{ faceSnap.createdDate  | date: 'longDate' }}</p>
+  <p>(Heure et date ) Mis en ligne le {{ faceSnap.createdDate  | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+>>>>>>> 1d46cbe (🎨 style(face-snap.component.html): use Angular pipes for text transformation)
   <p>{{ faceSnap.description | lowercase }}</p>
   <p *ngIf="faceSnap.location">Snap capture : {{ faceSnap.location }} </p>
   @if (faceSnap.location) {
