@@ -12,6 +12,7 @@ import {
   TitleCasePipe,
   UpperCasePipe,
 } from '@angular/common';
+import { FaceSnapsService } from '../services/face-snaps.service';
 
 @Component({
   selector: 'app-face-snap',
@@ -36,17 +37,17 @@ export class FaceSnapComponent {
   buttonText: string;
   @Input() faceSnap!: FaceSnap;
 
-  constructor() {
+  constructor(private faceSnapService: FaceSnapsService) {
     this.snapped = false;
     this.buttonText = 'Oh Snap!';
   }
 
   OnAddSnap() {
     if (this.buttonText === 'Oh Snap!') {
-      this.faceSnap.snaps++;
+      this.faceSnapService.SnapOfFaceSnapGetById(this.faceSnap.id);
       this.buttonText = 'Oops, unSnap!';
     } else {
-      this.faceSnap.snaps--;
+      this.faceSnapService.UnSnapOfFaceSnapGetById(this.faceSnap.id);
       this.buttonText = 'Oh Snap!';
     }
   }

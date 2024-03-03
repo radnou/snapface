@@ -15,6 +15,6 @@ export class FaceSnapListComponent {
   faceSnapList!: FaceSnap[];
 
   constructor(private faceSnapService: FaceSnapsService) {
-    this.faceSnapList = faceSnapService.faceSnapList;
+    this.faceSnapList = faceSnapService.getAllFaceSnaps();
   }
 }

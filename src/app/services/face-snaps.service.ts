@@ -42,4 +42,50 @@ export class FaceSnapsService {
       },
     ];
   }
+
+  getAllFaceSnaps(): FaceSnap[] {
+    return this.faceSnapList;
+  }
+
+  SnapOfFaceSnapGetById(id: number) {
+    try {
+      let faceSnap: FaceSnap;
+      faceSnap = this.getFaceSnapById(id);
+      faceSnap.snaps++;
+    } catch (e: any) {
+      console.log(e.getMessage());
+      throw new Error('snapface Id not found ');
+    }
+  }
+
+  UnSnapOfFaceSnapGetById(id: number) {
+    //retrieve the faceSnap
+    try {
+      let faceSnap: FaceSnap;
+      faceSnap = this.getFaceSnapById(id);
+      faceSnap.snaps--;
+    } catch (e: any) {
+      console.log(e.getMessage());
+      throw new Error('snapface Id not found ');
+    }
+  }
+
+  /**
+   * Update the snap
+   * @param faceSnapId the faceSnap ID
+   * @param snapType snap or unsnap to increment or decrease the count of snap
+   */
+
+  snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
+    const faceSnap = this.getFaceSnapById(faceSnapId);
+    snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
+  }
+
+  private getFaceSnapById(id: number) {
+    let faceSnap = this.faceSnapList.find((faceSnap) => faceSnap.id === id);
+    if (!faceSnap) {
+      throw new Error('snapface Id not found ');
+    }
+    return faceSnap;
+  }
 }
