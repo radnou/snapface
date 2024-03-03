@@ -1,9 +1,8 @@
 <main class="main">
   <div class="content">
-    <app-face-snap *ngFor="let theFaceSnap of faceSnaps" [faceSnap]="theFaceSnap"></app-face-snap>
-    @for (theFaceSnapOfArray of faceSnaps; track theFaceSnapOfArray.id) {
-      <app-face-snap [faceSnap]="theFaceSnapOfArray"></app-face-snap>
-    }
+
+    <app-face-snap-list></app-face-snap-list>
+
 
   </div>
 </main>

@@ -1,0 +1,5 @@
+<!--<app-face-snap *ngFor="let faceSnap of faceSnapList" [faceSnap]="faceSnap"></app-face-snap>-->
+@for (theFaceSnapOfArray of faceSnapList; track theFaceSnapOfArray.id) {
+  <app-face-snap [faceSnap]="theFaceSnapOfArray"></app-face-snap>
+}
+
