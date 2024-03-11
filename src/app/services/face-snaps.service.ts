@@ -81,7 +81,7 @@ export class FaceSnapsService {
     snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
   }
 
-  private getFaceSnapById(id: number) {
+  getFaceSnapById(id: number) {
     let faceSnap = this.faceSnapList.find((faceSnap) => faceSnap.id === id);
     if (!faceSnap) {
       throw new Error('snapface Id not found ');

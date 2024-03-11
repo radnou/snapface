@@ -5,7 +5,6 @@
   <p>(LongDate) Mis en ligne le {{ faceSnap.createdDate  | date: 'longDate' }}</p>
   <p>(Heure et date ) Mis en ligne le {{ faceSnap.createdDate  | date: 'à HH:mm, le d MMMM yyyy' }}</p>
   <p>{{ faceSnap.description | lowercase }}</p>
-  <p *ngIf="faceSnap.location">Snap capture : {{ faceSnap.location }} </p>
   @if (faceSnap.location) {
     <p>Snap capture : {{ faceSnap.location }}</p>
   }
@@ -14,7 +13,8 @@
       {{ buttonText }}
     </button>
     <span [ngStyle]="{color:'rgb(0,'+ faceSnap.snaps +',0)'}">🤌{{ faceSnap.snaps }}</span>
-    <button (click)="viewDetail()">View</button>
+
   </p>
+
 
 </div>
