@@ -17,6 +17,5 @@ export const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
-    data: { animation: 'openClosePage' },
   },
 ];

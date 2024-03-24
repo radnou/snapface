@@ -9,7 +9,7 @@ import {
   NgStyle,
   TitleCasePipe,
 } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-single-face-snap',
@@ -21,6 +21,7 @@ import { ActivatedRoute } from '@angular/router';
     TitleCasePipe,
     LowerCasePipe,
     DatePipe,
+    RouterLink,
   ],
   templateUrl: './single-face-snap.component.html',
   styleUrl: './single-face-snap.component.scss',

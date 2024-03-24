@@ -1,6 +1,7 @@
 <div class="face-snap-card">
   <img alt="picture of the day" src="{{ faceSnap.imageUrl}}"/>
   <h2>{{ faceSnap.title | titlecase }}</h2>
+  <button routerLink="/facesnaps"><- Back</button>
   <p>Mis en ligne le {{ faceSnap.createdDate  | date }}</p>
   <p>(LongDate) Mis en ligne le {{ faceSnap.createdDate  | date: 'longDate' }}</p>
   <p>(Heure et date ) Mis en ligne le {{ faceSnap.createdDate  | date: 'à HH:mm, le d MMMM yyyy' }}</p>
