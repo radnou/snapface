@@ -49,10 +49,10 @@ export class FaceSnapsService {
 
   SnapOfFaceSnapGetById(id: number) {
     try {
-      let faceSnap: FaceSnap;
+      const faceSnap: FaceSnap;
       faceSnap = this.getFaceSnapById(id);
       faceSnap.snaps++;
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.log(e.getMessage());
       throw new Error('snapface Id not found ');
     }
@@ -61,10 +61,10 @@ export class FaceSnapsService {
   UnSnapOfFaceSnapGetById(id: number) {
     //retrieve the faceSnap
     try {
-      let faceSnap: FaceSnap;
+      const faceSnap: FaceSnap;
       faceSnap = this.getFaceSnapById(id);
       faceSnap.snaps--;
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.log(e.getMessage());
       throw new Error('snapface Id not found ');
     }
@@ -82,7 +82,7 @@ export class FaceSnapsService {
   }
 
   getFaceSnapById(id: number) {
-    let faceSnap = this.faceSnapList.find((faceSnap) => faceSnap.id === id);
+    const faceSnap = this.faceSnapList.find((faceSnap) => faceSnap.id === id);
     if (!faceSnap) {
       throw new Error('snapface Id not found ');
     }
