@@ -1,6 +1,6 @@
 ## Demo
 
-https://precious-dango-908393.netlify.app/
+https://main--radnou-snapface.netlify.app/
 
 # Snapface
 
